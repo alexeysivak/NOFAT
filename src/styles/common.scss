@@ -1,0 +1,81 @@
+$corp_orange: #ff6f3d;
+$body__bg_dark: #1c1c1c; /*can`t be got*/
+$body__bg_light: #323130;
+$body__text-light: #f3ecd8;
+$body__text-dark: #151515;
+$forms__input-bg: #928e84;
+$html__font-size: 10px;
+
+@font-face {
+	font-family: Railway-Regular;
+	src: url('../fonts/Raleway/Raleway-Regular.ttf');
+	src: url('../fonts/Raleway/Raleway-Regular.woff'), url('../fonts/Raleway/Raleway-Regular.woff2'), url('../fonts/Raleway/Raleway-Regular.eot'),
+		url('../fonts/Raleway/Raleway-Regular.otf');
+}
+
+@font-face {
+	font-family: Railway-SeSemiBoldmibold;
+	src: url('../fonts/Raleway/Raleway-SemiBold.ttf');
+	src: url('../fonts/Raleway/Raleway-SemiBold.woff'), url('../fonts/Raleway/Raleway-SemiBold.woff2'), url('../fonts/Raleway/Raleway-SemiBold.eot'),
+		url('../fonts/Raleway/Raleway-SemiBold.otf');
+}
+
+@font-face {
+	font-family: Railway-Bold;
+	src: url('../fonts/Raleway/Raleway-Bold.ttf');
+	src: url('../fonts/Raleway/Raleway-Bold.woff'), url('../fonts/Raleway/Raleway-Bold.woff2'), url('../fonts/Raleway/Raleway-Bold.eot'),
+		url('../fonts/Raleway/Raleway-Bold.otf');
+}
+
+@font-face {
+	font-family: Montserrat-Regular;
+	src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+	src: url('../fonts/Montserrat/Montserrat-Regular.woff'), url('../fonts/Montserrat/Montserrat-Regular.woff2'),
+		url('../fonts/Montserrat/Montserrat-Regular.eot'), url('../fonts/Montserrat/Montserrat-Regular.otf');
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: $html__font-size;
+}
+
+@mixin button {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 1.8rem;
+}
+
+@mixin button_corp-bg {
+	width: 36.8rem;
+	height: 5.2rem;
+	background-color: $corp_orange;
+	color: #ccdcdd;
+}
+
+@mixin button_white_bg {
+	width: 21.6rem;
+	height: 4.12rem;
+	background-color: #f3ecd8;
+	color: #ccdcdd;
+}
+
+@mixin button_empty-bg {
+	width: 21.6rem;
+	height: 4.12rem;
+	background-color: inherit;
+	border: 1px solid $corp_orange;
+	color: $corp_orange;
+}
+
+@mixin block__heading {
+	font-family: Raleway;
+	font-size: 3.5rem;
+	color: $body__text-light;
+}

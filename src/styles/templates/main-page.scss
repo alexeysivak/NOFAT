@@ -1,0 +1,45 @@
+.home-navigation__section {
+	width: 100vw;
+	max-width: 144rem;
+	height: fit-content;
+	padding: 3rem 5%;
+	box-sizing: border-box;
+	//background: url('../../images/home-page-images/first-screen-bg.jpg');
+}
+
+.home-navigation__header {
+	width: inherit;
+	display: grid;
+	grid-template-columns: repeat(2, 2fr);
+	grid-template-rows: 1fr;
+	background: inherit;
+}
+
+.home-logo__container {
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+
+.home-navigation {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.home-navigation__burger {
+	.burger__line {
+		display: block;
+		width: 5rem;
+		height: 0.3rem;
+		background-color: #fff;
+	}
+
+	.burger__line::after {
+		display: block;
+		width: 5rem;
+		height: 0.3rem;
+		background-color: #fff;
+	}
+}
