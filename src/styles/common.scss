@@ -5,26 +5,14 @@ $body__text-light: #f3ecd8;
 $body__text-dark: #151515;
 $forms__input-bg: #928e84;
 $html__font-size: 10px;
+$text_small: 1.4rem;
+$text_medium: 1.6rem;
 
 @font-face {
-	font-family: Railway-Regular;
-	src: url('../fonts/Raleway/Raleway-Regular.ttf');
-	src: url('../fonts/Raleway/Raleway-Regular.woff'), url('../fonts/Raleway/Raleway-Regular.woff2'), url('../fonts/Raleway/Raleway-Regular.eot'),
-		url('../fonts/Raleway/Raleway-Regular.otf');
-}
-
-@font-face {
-	font-family: Railway-SeSemiBoldmibold;
-	src: url('../fonts/Raleway/Raleway-SemiBold.ttf');
-	src: url('../fonts/Raleway/Raleway-SemiBold.woff'), url('../fonts/Raleway/Raleway-SemiBold.woff2'), url('../fonts/Raleway/Raleway-SemiBold.eot'),
-		url('../fonts/Raleway/Raleway-SemiBold.otf');
-}
-
-@font-face {
-	font-family: Railway-Bold;
-	src: url('../fonts/Raleway/Raleway-Bold.ttf');
-	src: url('../fonts/Raleway/Raleway-Bold.woff'), url('../fonts/Raleway/Raleway-Bold.woff2'), url('../fonts/Raleway/Raleway-Bold.eot'),
-		url('../fonts/Raleway/Raleway-Bold.otf');
+	font-family: Montserrat-Light;
+	src: url('../fonts/Montserrat/Montserrat-Light.ttf');
+	src: url('../fonts/Montserrat/Montserrat-Light.woff'), url('../fonts/Montserrat/Montserrat-Light.woff2'),
+		url('../fonts/Montserrat/Montserrat-Light.eot'), url('../fonts/Montserrat/Montserrat-Light.otf');
 }
 
 @font-face {
@@ -32,6 +20,20 @@ $html__font-size: 10px;
 	src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
 	src: url('../fonts/Montserrat/Montserrat-Regular.woff'), url('../fonts/Montserrat/Montserrat-Regular.woff2'),
 		url('../fonts/Montserrat/Montserrat-Regular.eot'), url('../fonts/Montserrat/Montserrat-Regular.otf');
+}
+
+@font-face {
+	font-family: Montserrat-SemiBold;
+	src: url('../fonts/Montserrat/Montserrat-SemiBold.ttf');
+	src: url('../fonts/Montserrat/Montserrat-SemiBold.woff'), url('../fonts/Montserrat/Montserrat-SemiBold.woff2'),
+		url('../fonts/Montserrat/Montserrat-SemiBold.eot'), url('../fonts/Montserrat/Montserrat-SemiBold.otf');
+}
+
+@font-face {
+	font-family: Montserrat-Bold;
+	src: url('../fonts/Montserrat/Montserrat-Bold.ttf');
+	src: url('../fonts/Montserrat/Montserrat-Bold.woff'), url('../fonts/Montserrat/Montserrat-Bold.woff2'),
+		url('../fonts/Montserrat/Montserrat-Bold.eot'), url('../fonts/Montserrat/Montserrat-Bold.otf');
 }
 
 *,
@@ -42,40 +44,105 @@ $html__font-size: 10px;
 
 html {
 	font-size: $html__font-size;
+	padding: 0;
+	margin: 0;
 }
 
-@mixin button {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	font-family: Montserrat;
-	font-size: 1.8rem;
+.blur_black {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
 }
 
-@mixin button_corp-bg {
-	width: 36.8rem;
-	height: 5.2rem;
-	background-color: $corp_orange;
-	color: #ccdcdd;
+.hidden {
+	display: none;
 }
 
-@mixin button_white_bg {
-	width: 21.6rem;
-	height: 4.12rem;
-	background-color: #f3ecd8;
-	color: #ccdcdd;
+.visible {
+	display: block;
 }
 
-@mixin button_empty-bg {
-	width: 21.6rem;
-	height: 4.12rem;
-	background-color: inherit;
-	border: 1px solid $corp_orange;
+.text_orange {
 	color: $corp_orange;
 }
 
-@mixin block__heading {
-	font-family: Raleway;
+.text_small {
+	font-size: $text_small;
+	line-height: 1.2;
+}
+
+.text_medium {
+	font-size: $text_medium;
+}
+
+.subtite {
+	font-size: 1.8rem;
+}
+
+.section__heading {
+	box-sizing: border-box;
+	margin: 0 auto;
 	font-size: 3.5rem;
+	padding: 4rem 0;
+	text-align: center;
 	color: $body__text-light;
+}
+
+@mixin heading_medium_orange {
+	font-size: 2rem;
+	color: $corp_orange;
+	margin: 0;
+	padding: 0;
+}
+
+.heading_medium_orange {
+	@include heading_medium_orange;
+}
+
+@mixin button {
+	border: none;
+	outline: none;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-family: Montserrat-Light;
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+@mixin button_corp-bg {
+	@include button;
+	width: 33rem;
+	height: 5.2rem;
+	background-color: $corp_orange;
+	color: $body__text-light;
+	padding: 1.45rem;
+}
+
+@mixin button_white_bg {
+	@include button;
+	width: 21.6rem;
+	height: 4.12rem;
+	background-color: #f3ecd8;
+	color: $body__text-dark;
+	padding: 1rem;
+}
+
+@mixin button_empty-bg {
+	@include button;
+	width: 21.6rem;
+	height: 4.12rem;
+	padding: 0.9rem;
+	background-color: inherit;
+	border: 1px solid $corp_orange;
+	color: $body__text-light;
+}
+
+@mixin form__input {
+	display: block;
+	border: none;
+	outline: none;
+	width: 33rem;
+	padding: 1.5rem;
+	font-size: $text_medium;
 }

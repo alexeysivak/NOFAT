@@ -1,0 +1,171 @@
+.footer__map-container {
+	width: 100%;
+	height: 70vh;
+	border-bottom: 1px solid $corp_orange;
+}
+
+.footer__map {
+	width: 100%;
+	height: 100%;
+}
+
+.footer__contacts-section {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 60rem;
+	font-size: 1.8rem;
+	font-family: Montserrat-Light;
+	background-color: $body__bg_dark;
+	position: relative;
+
+	.text_medium,
+	.text_small {
+		color: $body__text-light;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.footer__content {
+	box-sizing: border-box;
+	height: fit-content;
+	max-width: 114rem;
+	margin: 0 auto;
+	padding: 5% 0 0;
+	display: grid;
+	grid-template-columns: 2fr 2fr 3fr;
+	grid-template-rows: 30rem 10rem 10rem;
+}
+
+.footer__logo-block {
+	grid-column: 1/2;
+	max-width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	.text_small {
+		margin-top: 1.5rem;
+	}
+}
+
+.footer__contacts {
+	grid-column: 2/3;
+}
+
+.footer__networks {
+	grid-column: 1/2;
+	grid-row: 2/3;
+	display: flex;
+	align-items: flex-end;
+}
+
+.footer__network {
+	padding: 0 0.5rem;
+
+	picture:hover,
+	picture:focus,
+	img:hover,
+	img:focus {
+		width: 4rem;
+		height: 4rem;
+	}
+}
+
+.footer__contact {
+	display: flex;
+	align-items: center;
+	padding: 2rem 1rem;
+
+	picture,
+	.footer__contact-icon {
+		padding: 0 1rem;
+	}
+
+	.text_medium {
+		padding: 0;
+		margin: 0;
+	}
+
+	.text_small {
+		grid-column: 2/3;
+		grid-row: 2/3;
+		padding: 0.5rem 0;
+		margin: 0;
+	}
+}
+
+.footer__contact:last-child {
+	padding: 2rem 0.5rem;
+
+	picture,
+	.footer__network-icon {
+		padding: 0 0.5rem;
+	}
+}
+
+.footer__form-block {
+	grid-column: 3/4;
+}
+
+.footer__form-block {
+	background-color: $body__bg_light;
+	padding: 5rem 9rem 1rem;
+	text-align: center;
+	position: absolute;
+	top: -15%;
+	right: 5%;
+}
+
+.footer__form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 3rem;
+
+	.form__input {
+		@include form__input;
+		margin-bottom: 1rem;
+		background-color: $forms__input-bg;
+		color: $body__text-light;
+	}
+
+	.form__textarea {
+		border: none;
+		outline: none;
+		resize: none;
+		background-color: $forms__input-bg;
+		color: $body__text-light;
+		padding: 1.5rem;
+	}
+
+	.form__input:hover,
+	.form__input:focus,
+	.form__textarea:hover,
+	.form__textarea:focus {
+		box-shadow: 0 0 5px $body__text-light;
+	}
+
+	.form__input::placeholder,
+	.form__textarea::placeholder {
+		color: $body__text-light;
+	}
+
+	.form__button {
+		margin: 3rem auto;
+		@include button_empty-bg;
+	}
+
+	.form__button:hover,
+	.form__button:focus {
+		background-color: $corp_orange;
+		color: $body__text-dark;
+	}
+}
+
+.footer__copyrights {
+	grid-column: 1/4;
+	grid-row: 3/4;
+	text-align: center;
+	margin-top: auto;
+}

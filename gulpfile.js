@@ -29,7 +29,7 @@ const path = {
 	src: {
 		html: `${souceFolder}/html/*.html`,
 		js: `${souceFolder}/js/*.js`,
-		css: [`${souceFolder}/styles/*.scss`, `!${souceFolder}/styles/main.css`],
+		css: [`${souceFolder}/styles/main.scss`, `!${souceFolder}/styles/main.css`],
 		fonts: `${souceFolder}/fonts/**/*.{ttf,otf,woff,woff2,gif}`,
 		img: `${souceFolder}/images/**/*.{jpg,png,svg,gif,ico,webp}`,
 	},
@@ -135,21 +135,23 @@ function copyImgs() {
 }
 
 function copyFonts() {
-	return src(path.src.fonts)
-		.pipe(
-			fonter({
-				formats: ['ttf'],
-			}),
-		)
-		.pipe(dest(path.fonter.build))
-		.pipe(src(path.fonter.src))
-		.pipe(dest(path.build.fonts))
-		.pipe(src(path.fonter.src))
-		.pipe(ttfToWoff())
-		.pipe(dest(path.build.fonts))
-		.pipe(src(path.fonter.src))
-		.pipe(ttfToWoff2())
-		.pipe(dest(path.build.fonts));
+	return (
+		src(path.src.fonts)
+			.pipe(
+				fonter({
+					formats: ['ttf'],
+				}),
+			)
+			.pipe(dest(path.fonter.build))
+			.pipe(src(path.fonter.src))
+			.pipe(dest(path.build.fonts))
+			// .pipe(src(path.fonter.src))
+			// .pipe(ttfToWoff())
+			// .pipe(dest(path.build.fonts))
+			.pipe(src(path.fonter.src))
+			.pipe(ttfToWoff2())
+			.pipe(dest(path.build.fonts))
+	);
 }
 
 function watchFiles() {
@@ -164,5 +166,5 @@ function cleanDist() {
 	return src(destFolder).pipe(clean());
 }
 
-exports.watch = series(cleanDist, copyHtml, copyCss, copyJS, copyFonts, copyImgs, parallel(watchFiles, serve));
-exports.default = series(cleanDist, copyHtml, copyCss, copyJS);
+exports.watch = series(cleanDist, copyHtml, copyCss, copyJS, copyFonts, copyImgs, parallel(watchFiles /*,serve*/));
+exports.default = series(cleanDist, copyHtml, copyCss, copyJS, copyFonts, copyImgs);

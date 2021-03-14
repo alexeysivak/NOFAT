@@ -1,0 +1,84 @@
+.home__team {
+	@include home__section;
+	background-color: $body__bg_dark;
+	position: relative;
+
+	&-content {
+		box-sizing: border-box;
+		height: 100%;
+		max-width: 114rem;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		flex-wrap: wrap;
+	}
+}
+
+.home__trainer-info {
+	width: 40%;
+	height: fit-content;
+	text-align: left;
+	border-left: 3px solid rgba($color: $corp_orange, $alpha: 0.5);
+	padding-left: 3.1rem;
+}
+
+.home__trainer-expirience {
+	display: flex;
+	justify-content: space-around;
+
+	div p {
+		font-size: 2rem;
+		font-family: Montserrat-Bold;
+		text-align: center;
+	}
+
+	div p:first-child {
+		border: 1px solid $corp_orange;
+		width: 7.4rem;
+		padding: 1.8rem 2rem;
+		margin: 0 auto 2rem;
+	}
+}
+
+.home__trainer-blockquote {
+	padding: 0;
+	margin: 6rem 0;
+	max-width: 80%;
+}
+
+.home__trainer-photo-block {
+	width: 50%;
+}
+
+.home__trainer-photo {
+	position: absolute;
+	top: -10%;
+	right: 10%;
+	z-index: 2;
+}
+
+.rect_grey {
+	width: 25rem;
+	height: 30rem;
+	position: absolute;
+	background-color: $body__bg_light;
+	top: 12%;
+	right: 0;
+}
+
+.home__team-button-block {
+	width: 100%;
+}
+
+.home__team-button {
+	@include button_white_bg;
+	margin: 5rem auto;
+
+	&:hover,
+	&:focus {
+		background-color: inherit;
+		color: $body__text-light;
+		border: 1px solid $body__text-light;
+	}
+}

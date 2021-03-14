@@ -1,0 +1,24 @@
+.home__parthners {
+	@include home__section;
+	background-color: $body__bg_dark;
+	position: relative;
+
+	&-content {
+		box-sizing: border-box;
+		height: fit-content;
+		max-width: 114rem;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		flex-wrap: wrap;
+	}
+}
+
+.home__parthners-logos {
+	padding: 5rem 0;
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+}

@@ -1,0 +1,26 @@
+.home__benefits {
+	@include home__section;
+	background-color: $body__bg_light;
+}
+
+.benefits__content {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 114rem;
+	height: fit-content;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.benefits__block {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 4fr);
+	column-gap: 5%;
+	margin-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.benefit__block {
+	text-align: center;
+}

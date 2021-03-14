@@ -1,0 +1,39 @@
+.home__about {
+	@include home__section;
+	background-color: $body__bg_light;
+	position: relative;
+
+	&-content {
+		box-sizing: border-box;
+		height: fit-content;
+		max-width: 114rem;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		flex-wrap: wrap;
+	}
+}
+
+.home__about-photo-block {
+	width: 30%;
+}
+
+.home__about-info {
+	width: 55%;
+	text-align: left;
+	margin-top: 10%;
+
+	p {
+		width: 80%;
+	}
+}
+
+.home__aubout-photo-block {
+	height: 48rem;
+}
+
+.home__about-photo {
+	position: absolute;
+	top: 0;
+}
