@@ -22,3 +22,15 @@
 	display: flex;
 	justify-content: space-around;
 }
+
+@media screen and (max-width: 768px) {
+	.home__parthners-logos {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.home__parthners {
+		display: none;
+	}
+}

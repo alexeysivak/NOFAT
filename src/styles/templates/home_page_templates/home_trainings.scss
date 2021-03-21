@@ -110,3 +110,79 @@
 		margin: 1.5rem 0;
 	}
 }
+
+@media screen and (max-width: 1240px) {
+	.home__training-block {
+		width: 90%;
+
+		.home__training-image,
+		.home__training {
+			max-width: 40vw;
+		}
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.home__training-block:nth-child(2),
+	.home__training-block:nth-child(5) {
+		padding-left: 0;
+	}
+
+	.home__training-block {
+		width: 94%;
+
+		.home__training-image,
+		.home__training {
+			max-width: 48vw;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home__training-block {
+		align-items: start;
+	}
+
+	.home__trainings-content {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.home__trainings {
+		border: 1px solid $body__bg_light;
+	}
+
+	.home__trainings-block {
+		grid-template-rows: repeat(2, 1fr) 50vh repeat(2, 1fr);
+	}
+
+	.home__trainings-sale {
+		grid-row: 3/4;
+	}
+
+	.home__training-block {
+		flex-direction: column;
+		width: 100%;
+		height: fit-content;
+
+		.home__training-image {
+			max-width: 100%;
+		}
+
+		.home__training {
+			max-width: 100%;
+			width: 100%;
+			padding: 2rem;
+
+			.text_small {
+				width: 100%;
+			}
+		}
+	}
+
+	.home__training-block:nth-child(2),
+	.home__training-block:nth-child(5) {
+		flex-direction: column-reverse;
+	}
+}

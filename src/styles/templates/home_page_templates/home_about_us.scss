@@ -36,4 +36,44 @@
 .home__about-photo {
 	position: absolute;
 	top: 0;
+	height: 100%;
+}
+
+@media screen and (max-width: 980px) {
+	.home__about-info {
+		width: 40%;
+		text-align: left;
+		margin-top: 10%;
+
+		p {
+			width: 90%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home__about-photo {
+		position: static;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.home__about-photo {
+		display: none;
+	}
+	.home__aubout-photo-block {
+		height: fit-content;
+	}
+	.home__about-info {
+		width: 100%;
+		padding: 1rem;
+		margin: 0 auto 2rem;
+		text-align: center;
+		height: fit-content;
+
+		p {
+			width: 100%;
+			line-height: 1.5;
+		}
+	}
 }

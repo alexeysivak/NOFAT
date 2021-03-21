@@ -1,6 +1,7 @@
 .home__first-screen {
 	@include home__section;
 	height: 100vh;
+	width: 100%;
 	max-height: fit-content;
 	background-image: url('../images/home-page-images/first-screen-bg.jpg');
 	background-position: center;
@@ -14,7 +15,6 @@
 
 .first-screen__header {
 	box-sizing: border-box;
-	width: 100%;
 	max-width: 114rem;
 	margin: 0 auto;
 	padding: 2rem 0;
@@ -32,6 +32,7 @@
 .home-navigation {
 	grid-column: 2/3;
 	grid-row: 1/2;
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
@@ -40,6 +41,17 @@
 	&__contact {
 		margin: 0;
 		padding: 0.5rem;
+
+		a {
+			text-decoration: none;
+			font-family: inherit;
+			color: $body__text-light;
+		}
+
+		picture,
+		img {
+			display: none;
+		}
 
 		p {
 			margin: 0;
@@ -197,6 +209,7 @@
 
 .home__form-container {
 	width: 45rem;
+	max-width: 40%;
 	height: fit-content;
 	text-align: left;
 	background-color: rgba(26, 26, 26, 0.71);
@@ -238,3 +251,118 @@
 /**
 * main styling end
 */
+
+@media screen and (max-width: 1240px) {
+	.first-screen__main,
+	.first-screen__header {
+		max-width: 80%;
+	}
+
+	.home__main-banner {
+		max-width: 50%;
+	}
+
+	.home__form-container {
+		padding: 3rem;
+	}
+
+	.first-screen__header {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.home-navigation {
+		grid-column: 2/4;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.first-screen__main,
+	.first-screen__header {
+		max-width: 90%;
+	}
+
+	.home__form-container {
+		padding: 2rem;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.first-screen__main {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.home__main-banner {
+		max-width: 80%;
+	}
+
+	.home__form-container {
+		max-width: 80%;
+		margin-top: 2rem;
+		padding: 5rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home__first-screen {
+		height: 100%;
+
+		.blur_black {
+			min-height: 90vh;
+		}
+	}
+
+	.home__main-banner {
+		text-align: center;
+	}
+
+	.home-navigation__burger .burger__menu {
+		top: 12vh;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.home__first-screen {
+		width: 100%;
+
+		.blur_black {
+			width: 100%;
+			min-height: 90vh;
+			padding-bottom: 1rem;
+		}
+	}
+
+	.home-navigation__contact {
+		margin: 0;
+		padding: 0.5rem;
+
+		picture,
+		img {
+			height: 4rem;
+			display: block;
+		}
+
+		p {
+			display: none;
+		}
+	}
+
+	.first-screen__main {
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+
+	.home__main-banner {
+		max-width: 94%;
+		padding: 0;
+		text-align: center;
+	}
+
+	.home__form-container {
+		max-width: 94%;
+		margin-top: 2rem;
+		padding: 2rem;
+	}
+}
