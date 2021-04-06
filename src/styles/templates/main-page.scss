@@ -1,11 +1,3 @@
-@mixin home__section {
-	box-sizing: border-box;
-	width: 100%;
-	color: $body__text-light;
-	font-size: 1.8rem;
-	font-family: Montserrat-Light;
-}
-
 @import './home_page_templates/home_page_first_screen.scss';
 @import './home_page_templates/home_benefits.scss';
 @import './home_page_templates/home_trainings.scss';

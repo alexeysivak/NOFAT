@@ -54,7 +54,8 @@
 
 .home__training-button {
 	@include button_empty-bg;
-
+	text-decoration: none;
+	padding: 0.8rem;
 	&:hover,
 	&:focus {
 		background-color: $corp_orange;

@@ -29,15 +29,16 @@
 
 	div p {
 		font-size: 2rem;
-		font-family: Montserrat-Bold;
 		text-align: center;
 	}
 
 	div p:first-child {
 		border: 1px solid $corp_orange;
-		width: 7.4rem;
-		padding: 1.8rem 2rem;
+		width: 9rem;
+		padding: 2rem 2rem;
 		margin: 0 auto 2rem;
+		line-height: 1;
+		font-family: Montserrat-Bold;
 	}
 }
 
@@ -76,6 +77,8 @@
 .home__team-button {
 	@include button_white_bg;
 	margin: 5rem auto;
+	text-decoration: none;
+	padding: 0.8rem;
 
 	&:hover,
 	&:focus {

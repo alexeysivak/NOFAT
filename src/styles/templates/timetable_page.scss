@@ -1,0 +1,151 @@
+.timetable__section {
+	@include home__section;
+	background-color: $body__bg_dark;
+}
+
+.timetable__container {
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 114rem;
+	height: fit-content;
+	margin: 0 auto;
+	padding: 3rem 0;
+
+	.section__heading {
+		text-align: left;
+	}
+}
+
+.timetable__days-block {
+	width: 100%;
+	height: fit-content;
+}
+
+.timetable__days {
+	width: 80%;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
+}
+
+.timetable__day {
+	border: none;
+	outline: none;
+	background: inherit;
+	color: $corp_orange;
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+
+	&:hover,
+	&:focus {
+		background: $button__bg_light;
+		color: $body__text-dark;
+		font-weight: 700;
+	}
+}
+
+.chosen-day {
+	background: $button__bg_light;
+	color: $body__text-dark;
+	font-family: Montserrat-Bold;
+}
+
+.timetable__content {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 3rem 0;
+}
+
+.timetable__item {
+	width: 30%;
+	background: $body__bg_light;
+	text-align: center;
+	margin: 1rem 0;
+
+	.timetable__item-time {
+		background: $button__bg_light;
+		color: $body__text-dark;
+		padding: 0.5rem 1rem;
+	}
+
+	.timetable__item-training {
+		color: $corp_orange;
+		font-size: 2rem;
+	}
+
+	.timetable__item-trainer {
+		font-size: 1.6rem;
+		color: $body__text-light;
+	}
+}
+
+.download-button__container {
+	width: 100%;
+}
+
+.download-button {
+	@include button_empty-bg;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		background: $corp_orange;
+	}
+}
+
+@media screen and (max-width: 144rem) {
+	.timetable__container {
+		padding: 3rem 1rem;
+	}
+
+	.timetable__days {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.timetable__day {
+		margin: 1rem 3rem 1rem 0;
+	}
+
+	.timetable__item-trainer {
+		width: 80%;
+		margin: 0 auto 1rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.timetable__item {
+		width: 48%;
+	}
+
+	.timetable__item-trainer {
+		width: 80%;
+		margin: 0 auto 1rem;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.timetable__days {
+		justify-content: space-between;
+	}
+
+	.timetable__item {
+		width: 100%;
+	}
+
+	.timetable__item-trainer {
+		width: 80%;
+		margin: 0 auto 1rem;
+	}
+
+	.download-button {
+		margin: 0 auto;
+	}
+}

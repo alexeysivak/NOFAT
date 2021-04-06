@@ -7,7 +7,9 @@ const burgerButton = document.getElementById('burgerButton');
 const formContainer = document.getElementById('formContainer');
 const homeBaner = document.getElementById('homeBaner');
 
-burgerButton.addEventListener('change', toggleElementsVisibility);
+if (burgerButton) {
+	burgerButton.addEventListener('change', toggleElementsVisibility);
+}
 
 function toggleElementsVisibility() {
 	if (burgerButton.checked) {
@@ -34,7 +36,9 @@ function toggleElementsVisibility() {
  * trainings page
  */
 const trainingContainer = document.getElementById('trainingContainer');
-trainingContainer.addEventListener('click', showAdditionalInfo);
+if (trainingContainer) {
+	trainingContainer.addEventListener('click', showAdditionalInfo);
+}
 
 function showAdditionalInfo(e) {
 	const condition = e.target.classList.contains('aditional-info__button');

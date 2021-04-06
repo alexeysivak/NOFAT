@@ -25,10 +25,10 @@
 
 .subscription-type__block {
 	margin: 2rem 0;
-}
 
-.section__heading {
-	text-align: left;
+	.section__heading {
+		text-align: left;
+	}
 }
 
 .gym-prices__table,
@@ -98,11 +98,6 @@ td {
 	p {
 		color: $corp_orange;
 	}
-}
-
-.text_thin {
-	font-size: 1.2rem;
-	opacity: 0.7;
 }
 
 @media screen and (max-width: 1140px) {

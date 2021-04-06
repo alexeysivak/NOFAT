@@ -1,6 +1,6 @@
 .footer__map-container {
 	width: 100%;
-	height: 70vh;
+	height: 80vh;
 	border-bottom: 1px solid $corp_orange;
 }
 
@@ -42,7 +42,7 @@
 	max-width: 70%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: flex-start;
 
 	.text_small {
@@ -96,19 +96,16 @@
 .footer__network {
 	padding: 0 0.5rem;
 
-	picture:hover,
-	picture:focus,
-	img:hover,
-	img:focus {
-		width: 4rem;
-		height: 4rem;
+	&:hover,
+	&:focus {
+		border-bottom: 1px solid $corp_orange;
 	}
 }
 
 .footer__form-block {
 	grid-column: 3/4;
 	background-color: $body__bg_light;
-	padding: 5rem 9rem 2rem;
+	padding: 5rem 7rem 2rem;
 	text-align: center;
 	position: absolute;
 	top: -10%;

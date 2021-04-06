@@ -3,10 +3,12 @@ $body__bg_dark: #1c1c1c; /*can`t be got*/
 $body__bg_light: #323130;
 $body__text-light: #f3ecd8;
 $body__text-dark: #151515;
+$button__bg_light: #f3ecd8;
 $forms__input-bg: #928e84;
 $html__font-size: 10px;
 $text_small: 1.4rem;
 $text_medium: 1.6rem;
+$text_big: 2.4rem;
 
 @font-face {
 	font-family: Montserrat-Light;
@@ -70,6 +72,11 @@ html {
 	color: $body__text-light;
 }
 
+.text_thin {
+	font-size: 1.2rem;
+	opacity: 0.7;
+}
+
 .text_small {
 	font-size: $text_small;
 	line-height: 1.2;
@@ -77,6 +84,10 @@ html {
 
 .text_medium {
 	font-size: $text_medium;
+}
+
+.text_big {
+	font-size: 2.4rem;
 }
 
 .subtite {
@@ -149,4 +160,13 @@ html {
 	width: 100%;
 	padding: 1.5rem;
 	font-size: $text_medium;
+}
+
+@mixin home__section {
+	box-sizing: border-box;
+	width: 100%;
+	color: $body__text-light;
+	font-size: 1.8rem;
+	font-family: Montserrat-Light;
+	line-height: 1.5;
 }
