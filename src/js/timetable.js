@@ -1,4 +1,4 @@
-const timetables = {
+const multilanguageTimetables = {
 	ru: [
 		{
 			Monday: [
@@ -305,11 +305,11 @@ function createTimetable(e) {
 	showDay(chosenDay);
 
 	const currentLanguage = getCurrentLanguage();
-	console.log('currentLanguage', currentLanguage);
-	const timetableForCurrentLanguage = timetables[currentLanguage];
-	console.log('timetableForCurrentLanguage', timetableForCurrentLanguage);
+
+	const timetableForCurrentLanguage = multilanguageTimetables[currentLanguage];
+
 	const timetableForChosenDay = timetableForCurrentLanguage.find((item) => item[chosenDay]);
-	console.log('timetableForChosenDay', timetableForChosenDay);
+	
 	renderTraining(timetableForChosenDay[chosenDay]);
 }
 

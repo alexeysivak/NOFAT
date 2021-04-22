@@ -37,24 +37,22 @@
 	font-weight: 700;
 }
 
-.navigation__lang-switcher {
-	.lang-switcher__button {
-		border: none;
-		outline: none;
-		background: none;
-		color: $body__text-light;
-		padding: 0.5rem;
-		cursor: pointer;
-	}
+.lang-switcher__button {
+	border: none;
+	outline: none;
+	background: none;
+	color: $body__text-light;
+	padding: 0.5rem;
+	cursor: pointer;
+}
 
-	.lang-switcher__button:hover,
-	.lang-switcher__button:hover {
-		color: $corp_orange;
-	}
+.lang-switcher__button:hover,
+.lang-switcher__button:hover {
+	color: $corp_orange;
+}
 
-	.chosen-lang {
-		color: $corp_orange;
-	}
+.chosen-lang {
+	color: $corp_orange;
 }
 
 .navigation__burger {

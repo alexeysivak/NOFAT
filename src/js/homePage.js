@@ -29,10 +29,6 @@ function toggleElementsVisibility() {
 }
 
 /**
- * home page end
- */
-
-/**
  * trainings page
  */
 const trainingContainer = document.getElementById('trainingContainer');
@@ -48,7 +44,3 @@ function showAdditionalInfo(e) {
 		e.target.classList.add('hidden');
 	}
 }
-
-/**
- * trainings page end
- */

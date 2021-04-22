@@ -336,27 +336,35 @@ template {
 
 /*can`t be got*/
 @font-face {
-  font-family: Montserrat-Light;
-  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
-  src: url("../fonts/Montserrat/Montserrat-Light.woff2"), url("../fonts/Montserrat/Montserrat-Light.woff"), url("../fonts/Montserrat/Montserrat-Light.eot"), url("../fonts/Montserrat/Montserrat-Light.otf");
+  font-family: Montserrat-Regular;
+  src: url("../fonts/Montserrat/ Montserrat-Regular.ttf");
+  src: url("../fonts/Montserrat/ Montserrat-Regular.woff2");
+  /*, url('../fonts/Montserrat/ Montserrat-Regular.woff'),
+		url('../fonts/Montserrat/ Montserrat-Regular.eot'), url('../fonts/Montserrat/ Montserrat-Regular.otf');*/
 }
 
 @font-face {
   font-family: Montserrat-Regular;
   src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
-  src: url("../fonts/Montserrat/Montserrat-Regular.woff2"), url("../fonts/Montserrat/Montserrat-Regular.woff"), url("../fonts/Montserrat/Montserrat-Regular.eot"), url("../fonts/Montserrat/Montserrat-Regular.otf");
+  src: url("../fonts/Montserrat/Montserrat-Regular.woff2");
+  /*, url('../fonts/Montserrat/Montserrat-Regular.woff'),
+		url('../fonts/Montserrat/Montserrat-Regular.eot'), url('../fonts/Montserrat/Montserrat-Regular.otf');*/
 }
 
 @font-face {
   font-family: Montserrat-SemiBold;
   src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
-  src: url("../fonts/Montserrat/Montserrat-SemiBold.woff2"), url("../fonts/Montserrat/Montserrat-SemiBold.woff"), url("../fonts/Montserrat/Montserrat-SemiBold.eot"), url("../fonts/Montserrat/Montserrat-SemiBold.otf");
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.woff2");
+  /*, url('../fonts/Montserrat/Montserrat-SemiBold.woff'),
+		url('../fonts/Montserrat/Montserrat-SemiBold.eot'), url('../fonts/Montserrat/Montserrat-SemiBold.otf');*/
 }
 
 @font-face {
   font-family: Montserrat-Bold;
   src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
-  src: url("../fonts/Montserrat/Montserrat-Bold.woff2"), url("../fonts/Montserrat/Montserrat-Bold.woff"), url("../fonts/Montserrat/Montserrat-Bold.eot"), url("../fonts/Montserrat/Montserrat-Bold.otf");
+  src: url("../fonts/Montserrat/Montserrat-Bold.woff2");
+  /*, url('../fonts/Montserrat/Montserrat-Bold.woff'),
+		url('../fonts/Montserrat/Montserrat-Bold.eot'), url('../fonts/Montserrat/Montserrat-Bold.otf');*/
 }
 
 *,
@@ -447,7 +455,7 @@ html {
   width: 100%;
   min-height: 60rem;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   background-color: #1c1c1c;
   position: relative;
 }
@@ -542,6 +550,8 @@ html {
   position: absolute;
   top: -10%;
   right: 5%;
+  max-width: 35%;
+  min-height: 25rem;
 }
 
 .footer__form {
@@ -590,7 +600,7 @@ html {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   font-size: 1.8rem;
   cursor: pointer;
   width: 21.6rem;
@@ -742,7 +752,7 @@ html {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   height: 100vh;
   width: 100%;
@@ -810,6 +820,7 @@ html {
   padding: 0.5rem;
 }
 
+.home-navigation__lang-switcher .chosen-lang,
 .home-navigation__lang-switcher .lang-switcher__button:hover,
 .home-navigation__lang-switcher .lang-switcher__button:hover {
   color: #ff6f3d;
@@ -931,7 +942,7 @@ html {
 
 .home__main-banner {
   width: fit-content;
-  max-width: 47rem;
+  max-width: 40vw;
   text-align: left;
 }
 
@@ -943,6 +954,7 @@ html {
   width: 100%;
   font-size: 5rem;
   margin-bottom: 1rem;
+  line-height: 1;
 }
 
 .home__form-container {
@@ -986,7 +998,7 @@ html {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   font-size: 1.8rem;
   cursor: pointer;
   width: 100%;
@@ -1107,7 +1119,7 @@ html {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #323130;
 }
@@ -1153,7 +1165,7 @@ html {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }
@@ -1217,7 +1229,7 @@ html {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   font-size: 1.8rem;
   cursor: pointer;
   width: 21.6rem;
@@ -1257,7 +1269,7 @@ html {
   height: fit-content;
   padding: 0;
   margin: 0;
-  font-family: Montserrat-SemiBold;
+  font-family: ' Montserrat-SemiBold';
   text-align: center;
 }
 
@@ -1281,7 +1293,7 @@ html {
 .home__sale-info p:nth-child(4) {
   font-size: 2rem;
   color: #ff6f3d;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   grid-row: 5/6;
   align-self: end;
   margin: 1.5rem 0;
@@ -1357,7 +1369,7 @@ html {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
   position: relative;
@@ -1439,7 +1451,7 @@ html {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   font-size: 1.8rem;
   cursor: pointer;
   width: 21.6rem;
@@ -1507,7 +1519,7 @@ html {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #323130;
   position: relative;
@@ -1590,7 +1602,7 @@ html {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
   position: relative;
@@ -1632,7 +1644,7 @@ html {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #323130;
 }
@@ -1671,20 +1683,21 @@ html {
   font-weight: 700;
 }
 
-.navigation__lang-switcher .lang-switcher__button {
+.lang-switcher__button {
   border: none;
   outline: none;
   background: none;
   color: #f3ecd8;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
-.navigation__lang-switcher .lang-switcher__button:hover,
-.navigation__lang-switcher .lang-switcher__button:hover {
+.lang-switcher__button:hover,
+.lang-switcher__button:hover {
   color: #ff6f3d;
 }
 
-.navigation__lang-switcher .chosen-lang {
+.chosen-lang {
   color: #ff6f3d;
 }
 
@@ -1816,7 +1829,7 @@ html {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #323130;
 }
@@ -1932,12 +1945,13 @@ html {
 .training__button {
   margin: 5rem auto;
   padding: 1rem 2rem;
+  text-decoration: none;
   border: none;
   outline: none;
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   font-size: 1.8rem;
   cursor: pointer;
   width: 21.6rem;
@@ -1984,7 +1998,7 @@ html {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }
@@ -2118,7 +2132,7 @@ td {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }
@@ -2180,7 +2194,7 @@ td {
 .trainer-expirience div p:first-child {
   border: 1px solid #ff6f3d;
   width: 9rem;
-  padding: 2rem 2rem;
+  padding: 2rem 1.7rem;
   margin: 0 auto 2rem;
   line-height: 1;
   font-family: Montserrat-Bold;
@@ -2252,7 +2266,7 @@ td {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }
@@ -2288,7 +2302,7 @@ td {
 
 .form-block .form-title {
   text-align: center;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
 }
 
 .form-input {
@@ -2341,7 +2355,7 @@ td {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }
@@ -2386,7 +2400,6 @@ td {
 .timetable__day:hover, .timetable__day:focus {
   background: #f3ecd8;
   color: #151515;
-  font-weight: 700;
 }
 
 .chosen-day {
@@ -2436,7 +2449,7 @@ td {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   font-size: 1.8rem;
   cursor: pointer;
   width: 21.6rem;
@@ -2502,7 +2515,7 @@ td {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }
@@ -2543,7 +2556,7 @@ td {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }
@@ -2579,7 +2592,7 @@ td {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   font-size: 1.8rem;
   cursor: pointer;
   width: 21.6rem;
@@ -2617,7 +2630,7 @@ td {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }
@@ -2741,7 +2754,7 @@ td {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }
@@ -2810,7 +2823,7 @@ td {
   width: 100%;
   color: #f3ecd8;
   font-size: 1.8rem;
-  font-family: Montserrat-Light;
+  font-family: Montserrat-Regular;
   line-height: 1.5;
   background-color: #1c1c1c;
 }

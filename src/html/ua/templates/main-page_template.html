@@ -12,9 +12,9 @@
 					>
 				</div>
 				<div class="home-navigation__lang-switcher lang-switcher" id="languageSwitcher">
-					<button class="lang-switcher__button">EN</button>
-					<button class="lang-switcher__button chosen-lang">RU</button>
-					<button class="lang-switcher__button">UA</button>
+					<button class="lang-switcher__button" name="en">EN</button>
+					<button class="lang-switcher__button" name="ru">RU</button>
+					<button class="lang-switcher__button" name="ua">UA</button>
 				</div>
 				<div class="home-navigation__burger burger__block" id="navigationMenu">
 					<input class="burger__toggle" id="burgerButton" type="checkbox" />
@@ -32,7 +32,7 @@
 				</div>
 			</nav>
 		</header>
-		<main class="first-screen__main">
+		<main class="first-screen__main" id="firstScreen">
 			<div class="home__main-banner" id="homeBaner">
 				<h1 class="home__main-heading"><span class="text_orange">Зміни</span> своє тіло прямо зараз!</h1>
 				<span class="text_small">Кращий фітнес центр в місті!</span>
@@ -43,9 +43,9 @@
 			</div>
 			<div class="home__form-container" id="formContainer">
 				<h4 class="subtite">Запишись на безкоштовну пробну тренування в один клік</h4>
-				<form class="home__form">
-					<input type="phone" class="home__form-input" placeholder="Ваш телефон" required />
-					<input type="email" class="home__form-input" placeholder="E-mail" required />
+				<form class="home__form" id="clientForm">
+					<input type="text" class="home__form-input" placeholder="Ваше ім'я" name="name" required />
+					<input type="phone" class="home__form-input" placeholder="Номер телефону" name="phone" required />
 					<button class="form__button_orange">Записаться</button>
 				</form>
 			</div>

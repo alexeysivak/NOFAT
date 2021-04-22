@@ -68,6 +68,7 @@
 		padding: 0.5rem;
 	}
 
+	.chosen-lang,
 	.lang-switcher__button:hover,
 	.lang-switcher__button:hover {
 		color: $corp_orange;
@@ -193,7 +194,7 @@
 
 .home__main-banner {
 	width: fit-content;
-	max-width: 47rem;
+	max-width: 40vw;
 	text-align: left;
 
 	p {
@@ -205,6 +206,7 @@
 	width: 100%;
 	font-size: 5rem;
 	margin-bottom: 1rem;
+	line-height: 1;
 }
 
 .home__form-container {

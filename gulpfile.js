@@ -27,7 +27,7 @@ const destFolder = 'dist';
 
 const path = {
 	src: {
-		html: `${souceFolder}/html/*.html`,
+		html: `${souceFolder}/html/**/*.html`,
 		js: `${souceFolder}/js/*.js`,
 		css: [`${souceFolder}/styles/main.scss`, `!${souceFolder}/styles/main.css`],
 		fonts: `${souceFolder}/fonts/**/*.{ttf,otf,woff,woff2,gif}`,
