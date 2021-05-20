@@ -4,10 +4,7 @@
   "type": "module",
   "description": "",
   "main": "main.js",
-  "scripts": {
-    "wp-env": "wp-env",
-    "gulp": "node ./node_modules/gulp/bin/gulp.js php"
-},
+  "scripts": {},
   "author": "Alexey Sivak",
   "license": "ISC",
   "devDependencies": {
