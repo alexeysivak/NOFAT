@@ -1,7 +1,5 @@
-document.addEventListener('DOMContentLoaded', switchChosenLanguageButton);
-
 function switchChosenLanguageButton() {
-	const languageDisplayButton = document.querySelector(`#languageSwitcher button[name=${currentLanguage}]`);
+	const languageDisplayButton = document.querySelector(`#languageSwitcher button[name=${CURRENT_LANGUAGE}]`);
 
 	languageDisplayButton.classList.add('chosen-lang');
 }

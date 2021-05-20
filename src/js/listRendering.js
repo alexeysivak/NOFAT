@@ -1,15 +1,4 @@
-const ITEMS_ON_PAGE = 4;
-
-const pagination = document.getElementById('pagination');
-const trainersList = document.getElementById('trainersList');
-const trainersCollection = document.getElementsByClassName('trainer');
-const postsBlock = document.getElementById('postsBlock');
-const postsCollection = document.getElementsByClassName('blog__post');
-const paginationButtons = document.getElementsByClassName('pagination__button');
-
-initializeList();
-
-function initializeList() {
+function initializeListsRendering() {
 	if (trainersCollection[0]) {
 		getPaginationNumbers(trainersCollection);
 

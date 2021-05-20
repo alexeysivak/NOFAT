@@ -280,11 +280,7 @@ const multilanguageTimetables = {
 	],
 };
 
-const timetableContainer = document.getElementById('timetableContainer');
-
-isDaysContainerPresent();
-
-function isDaysContainerPresent() {
+function initializeTimetable() {
 	const daysContainer = document.getElementById('daysContainer');
 
 	if (daysContainer) {
@@ -304,12 +300,10 @@ function createTimetable(e) {
 
 	showDay(chosenDay);
 
-	const currentLanguage = getCurrentLanguage();
-
-	const timetableForCurrentLanguage = multilanguageTimetables[currentLanguage];
+	const timetableForCurrentLanguage = multilanguageTimetables[CURRENT_LANGUAGE];
 
 	const timetableForChosenDay = timetableForCurrentLanguage.find((item) => item[chosenDay]);
-	
+
 	renderTraining(timetableForChosenDay[chosenDay]);
 }
 
@@ -360,11 +354,9 @@ function renderTraining(trainings) {
  *  downloading timetable
  */
 
-const downloadButton = document.getElementById('downloadButton');
+function initTimetableDownloading() {
+	const downloadButton = document.getElementById('downloadButton');
 
-isDownloadButtonPresent();
-
-function isDownloadButtonPresent() {
 	if (downloadButton) {
 		downloadButton.addEventListener('click', downloadTimetable);
 	}
