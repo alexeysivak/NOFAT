@@ -1342,6 +1342,12 @@ html {
   .home__trainings-sale {
     grid-row: 3/4;
   }
+  .home__trainings-sale .home__sale-info p:nth-child(1) {
+    font-size: 3rem;
+  }
+  .home__trainings-sale .home__sale-info p:nth-child(1) {
+    font-size: 3rem;
+  }
   .home__training-block {
     flex-direction: column;
     width: 100%;
@@ -2776,7 +2782,6 @@ td {
 }
 
 .contacts__form-block .footer__form-block {
-  position: static;
   width: 40%;
   margin: 5rem auto;
 }
@@ -2832,4 +2837,38 @@ td {
   text-align: center;
   padding: 2rem;
   margin: 0;
+}
+
+@media screen and (max-width: 144rem) {
+  .contacts__container {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .form-container {
+    padding: 10rem 0;
+  }
+  .contacts-block div {
+    width: 40%;
+    padding: 1rem 0;
+  }
+  .contacts__form-block .footer__form-block {
+    width: 60%;
+    margin: 5rem auto 0;
+  }
+  .contacts__container .footer__networks {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contacts-block div {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .contacts__form-block .footer__form-block {
+    width: 90%;
+    margin: 5rem auto 0;
+  }
 }

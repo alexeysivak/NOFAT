@@ -160,6 +160,15 @@
 
 	.home__trainings-sale {
 		grid-row: 3/4;
+
+		.home__sale-info {
+			p:nth-child(1) {
+				font-size: 3rem;
+			}
+			p:nth-child(1) {
+				font-size: 3rem;
+			}
+		}
 	}
 
 	.home__training-block {
