@@ -42,6 +42,8 @@ $text_big: 2.4rem;
 *::after,
 *::before {
 	box-sizing: border-box;
+	-webkit-box-sizing: padding-box;
+	-moz-box-sizing: padding-box;
 }
 
 html {

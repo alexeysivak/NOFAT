@@ -116,6 +116,7 @@ function divideList(collection, start, end) {
 }
 
 function renderList(archiveItem) {
+	window.scrollTo(top);
 	archiveItem.classList.remove('hidden');
 }
 

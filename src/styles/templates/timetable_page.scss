@@ -133,6 +133,10 @@
 @media screen and (max-width: 576px) {
 	.timetable__days {
 		justify-content: space-between;
+
+		li {
+			width: 45%;
+		}
 	}
 
 	.timetable__item {
