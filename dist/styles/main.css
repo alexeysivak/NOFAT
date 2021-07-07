@@ -1259,8 +1259,9 @@ html {
 .home__sale-info {
   width: 100%;
   height: 100%;
+  min-height: fit-content;
   display: grid;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
   grid-template-rows: 3fr repeat(3, 1fr) 3fr;
 }
 
@@ -1269,7 +1270,7 @@ html {
   height: fit-content;
   padding: 0;
   margin: 0;
-  font-family: ' Montserrat-SemiBold';
+  font-family: 'Montserrat-SemiBold';
   text-align: center;
 }
 
@@ -1337,7 +1338,7 @@ html {
     border: 1px solid #323130;
   }
   .home__trainings-block {
-    grid-template-rows: repeat(2, 1fr) 50vh repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr) auto repeat(2, 1fr);
   }
   .home__trainings-sale {
     grid-row: 3/4;
