@@ -15,7 +15,6 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const webpHtml = require('gulp-webp-html');
 const webpCss = require('gulp-webpcss');
-const ttfToWoff = require('gulp-ttf2woff');
 const ttfToWoff2 = require('gulp-ttf2woff2');
 const fonter = require('gulp-fonter');
 const scss = require('gulp-sass');
@@ -27,7 +26,7 @@ const destFolder = 'dist';
 
 const path = {
 	src: {
-		html: `${souceFolder}/html/**/*.html`,
+		html: [`${souceFolder}/html/**/*.html`, `!${souceFolder}/html/**/templates/*.html`],
 		js: `${souceFolder}/js/*.js`,
 		css: [`${souceFolder}/styles/main.scss`, `!${souceFolder}/styles/main.css`],
 		fonts: `${souceFolder}/fonts/**/*.{ttf,otf,woff,woff2,gif}`,
@@ -51,11 +50,11 @@ const path = {
 function serve(cb) {
 	browserSync.init({
 		server: {
-			baseDir: `./${destFolder}`,
+			baseDir: `./${destFolder}/html/en/`,
 		},
 		port: 3000,
 		notify: false,
-		index: 'main.html',
+		index: 'home_page.html',
 	});
 
 	browserSync.watch(`${destFolder}/**/*.*`).on('change', browserSync.reload);
@@ -135,23 +134,18 @@ function copyImgs() {
 }
 
 function copyFonts() {
-	return (
-		src(path.src.fonts)
-			.pipe(
-				fonter({
-					formats: ['ttf'],
-				}),
-			)
-			.pipe(dest(path.fonter.build))
-			.pipe(src(path.fonter.src))
-			.pipe(dest(path.build.fonts))
-			// .pipe(src(path.fonter.src))
-			// .pipe(ttfToWoff())
-			// .pipe(dest(path.build.fonts))
-			.pipe(src(path.fonter.src))
-			.pipe(ttfToWoff2())
-			.pipe(dest(path.build.fonts))
-	);
+	return src(path.src.fonts)
+		.pipe(
+			fonter({
+				formats: ['ttf'],
+			}),
+		)
+		.pipe(dest(path.fonter.build))
+		.pipe(src(path.fonter.src))
+		.pipe(dest(path.build.fonts))
+		.pipe(src(path.fonter.src))
+		.pipe(ttfToWoff2())
+		.pipe(dest(path.build.fonts));
 }
 
 function watchFiles() {
@@ -166,5 +160,5 @@ function cleanDist() {
 	return src(destFolder).pipe(clean());
 }
 
-exports.watch = series(cleanDist, copyHtml, copyCss, copyJS, copyFonts, copyImgs, parallel(watchFiles /*,serve*/));
+exports.watch = series(cleanDist, copyHtml, copyCss, copyJS, copyFonts, copyImgs, parallel(watchFiles /*, serve*/));
 exports.default = series(cleanDist, copyHtml, copyCss, copyJS, copyFonts, copyImgs);
